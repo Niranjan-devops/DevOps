@@ -40,7 +40,7 @@ tags = {
 }
 ```
 
-### 🔄 toset(...)
+### 🔄 `toset(...)`
 ``` toset(data.aws_availability_zones.az.names)```
 Converts a list to a set for use with `for_each`.
 Ensures uniqueness and compatibility.
