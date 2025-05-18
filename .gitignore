@@ -4,6 +4,8 @@
 *~
 
 # Ignore Terraform-specific generated files
+*.terraform/
+*.terraform.lock.hcl
 .terraform/
 *.tfstate
 *.tfstate.backup
