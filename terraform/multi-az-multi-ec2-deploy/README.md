@@ -42,6 +42,14 @@ instance_matrix = {
   pair.key => pair.value
 }
 ```
+* Converts the flat list into a map of:
+```
+{
+  "ap-south-1a-0" = "ap-south-1a"
+  "ap-south-1a-1" = "ap-south-1a"
+  ...
+}
+```
 * This map is ideal for for_each, ensuring each EC2 instance has a unique key.
 
 
@@ -71,8 +79,3 @@ ec2-ap-south-1a-0
 ec2-ap-south-1c-1
 ```
 * Useful for monitoring, debugging, and cost tracking.
-
-
-
-
-
