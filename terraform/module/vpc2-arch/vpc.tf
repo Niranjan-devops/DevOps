@@ -1,5 +1,5 @@
 module "vpc2" {
-    source = "../vpc-arch-module"
+    source = "git::https://github.com/Niranjan-devops/terraform-vpc-module.git"
     region = var.region
     cidr_block_range=var.cidr_block_range
     pub_sub1_cidr_range=var.pub_sub1_cidr_range
