@@ -1,0 +1,8 @@
+cidr_block_range     = "198.162.0.0/24"
+region               = "ap-south-1"
+pub_sub1_cidr_range  = "198.162.1.0/24"
+pub_sub1_region      = "ap-south-1a"
+pub_sub2_cidr_range  = "198.162.2.0/24"
+pub_sub2_region      = "ap-south-1b"
+priv_sub1_cidr_range = "198.162.3.0/24"
+priv_sub1_region     = "ap-south-1a"

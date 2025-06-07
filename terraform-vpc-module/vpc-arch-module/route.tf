@@ -1,33 +1,3 @@
-provider "aws" {
-  region = "ap-south-1"
-}
-
-resource "aws_vpc" "vpc" {
-  cidr_block = "198.162.0.0/16"
-}
-
-resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.vpc.id
-}
-
-resource "aws_subnet" "pub_sub1" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = "198.162.1.0/24"
-  availability_zone = "ap-south-1a"
-}
-
-resource "aws_subnet" "pub_sub2" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = "198.162.2.0/24"
-  availability_zone = "ap-south-1b"
-}
-
-resource "aws_subnet" "priv_sub1" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = "198.162.3.0/24"
-  availability_zone = "ap-south-1a"
-}
-
 resource "aws_route_table" "pub_route" {
   vpc_id = aws_vpc.vpc.id
 }
@@ -60,5 +30,5 @@ resource "aws_route" "route_pub_route" {
 resource "aws_route" "route_prv_route" {
   route_table_id         = aws_route_table.priv_route.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id = aws_internet_gateway.igw.id
+  gateway_id             = aws_internet_gateway.igw.id
 }
